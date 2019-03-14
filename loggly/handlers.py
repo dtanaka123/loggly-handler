@@ -4,9 +4,9 @@ import logging.handlers
 import socket
 import traceback
 
-from requests_futures.sessions import FuturesSession
+import requests
 
-session = FuturesSession()
+session = requests.Session()
 
 class HTTPSHandler(logging.Handler):
     def __init__(self, url, fqdn=False, localname=None, facility=None):
